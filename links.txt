@@ -1,0 +1,3 @@
+https://console.firebase.google.com/?pli=1
+https://console.firebase.google.com/u/0/project/_/storage/files
+https://console.cloud.google.com/projectselector2/storage/browser?authuser=0&supportedpurview=project
