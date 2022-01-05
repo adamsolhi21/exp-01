@@ -13,6 +13,10 @@ body {
   color: #444444;
 }
 
+.text-center {
+  text-align: center!important;
+}
+
 a {
   color: #ffb727;
   text-decoration: none;
@@ -80,6 +84,14 @@ h1, h2, h3, h4, h5, h6 {
 /**
 * Desktop Navigation 
 */
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
 .navbar {
   padding: 0;
 }
@@ -96,15 +108,11 @@ h1, h2, h3, h4, h5, h6 {
 .navbar a, .navbar a:focus {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 10px 15px;
   color: #000;
   white-space: nowrap;
   transition: 0.3s;
-  font-size: 12px;
-  font-family: "Raleway", sans-serif;
-  text-transform: uppercase;
-  font-weight: 600;
   letter-spacing: 1px;
 }
 .navbar a i, .navbar a:focus i {
@@ -113,26 +121,47 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: 5px;
   
 }
-.navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+.navbar a:hover, .navbar, li:hover > a {
   color: #ffb727;
 }
-.navbar .dropdown ul {
-  display: block;
-  position: absolute;
-  left: 14px;
-  top: calc(100% + 30px);
-  margin: 0;
-  padding: 10px 0;
-  z-index: 99;
-  opacity: 0;
-  visibility: hidden;
-  background: #fff;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-  transition: 0.3s;
-  border-radius: 4px;
+ftco-navbar-light .navbar-nav>.nav-item.active>a {
+  color: #ffb5b5;
 }
+.navbar a:after, .navbar, li:after > a {
+  color: #f1a5ee;
+}
+
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+  font-size: 16px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-weight: 400;
+  color: #2c396b;
+  text-transform: uppercase;
+  font-family: "EB Garamond", serif;
+  position: relative;
+  opacity: 1 !important;
+}
+
 .navbar .dropdown ul li {
   min-width: 200px;
+}
+
+ul li::marker {
+  color: #000;
+  font-size: 5em;
+}
+ul li:nth-of-type(1) {
+ list-style: none;
+}
+
+ul li {
+  list-style-type: disc;
+  font-size: 0.1em;
+  margin-left: 10em;
+  justify-content: center;
 }
 .navbar .dropdown ul a {
   padding: 10px 20px;
@@ -173,9 +202,41 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@media (min-width: 992px) {
+.navbar-expand-lg .navbar-collapse {
+    display: -webkit-box!important;
+    display: -ms-flexbox!important;
+    display: flex!important;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+}
+}
+
 /**
 * Mobile Navigation 
 */
+
+.navbar-dark .navbar-toggler {
+  color: rgba(255,255,255,.5);
+  border-color: rgba(255,255,255,.1);
+}
+@media (min-width: 992px) {
+.navbar-expand-lg .navbar-toggler {
+  display: none;
+}
+}
+
+
+
+.navbar-toggler {
+  padding: 0.25rem 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+
 .mobile-nav-toggle {
   color: #fff;
   font-size: 28px;
@@ -279,6 +340,11 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
 }
 
+.navbar-brand {
+  font-weight: 400;
+  font-size: 40px;
+  font-family: "EB Garamond", serif;
+}
 
 /*--------------------------------------------------------------
 # Hero Section
