@@ -27,8 +27,13 @@ a:hover {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway", sans-serif;
+h1, h2, h3, h5, h6 {
+  font-family: "satisfy", sans-serif;
+}
+
+h4 {
+  color:#ffb727;
+
 }
 
 /*--------------------------------------------------------------
@@ -85,11 +90,12 @@ h1, h2, h3, h4, h5, h6 {
 * Desktop Navigation 
 */
 
-.menu {
+@media (min-width:966px ) {
+  .menu {
   display: flex;
   align-items: center;
   justify-content: center;
-
+}
 
 }
 .navbar {
@@ -102,8 +108,9 @@ h1, h2, h3, h4, h5, h6 {
   list-style: none;
   align-items: center;
 }
-.navbar li {
-  position: relative;
+ li {
+ align-items: center;
+  list-style: none;
 }
 .navbar a, .navbar a:focus {
   display: flex;
@@ -119,6 +126,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 12px;
   line-height: 0;
   margin-left: 5px;
+  justify-content: space-around;
   
 }
 .navbar a:hover, .navbar, li:hover > a {
